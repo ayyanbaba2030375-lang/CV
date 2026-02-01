@@ -1,87 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AYYAN AZEEM- CV</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayyan Azeem | CV</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:radial-gradient(circle at top,#0a0f1f,#020617);
+  overflow-x:hidden;
+  animation:bgMove 20s linear infinite;
+}
+
+/* Neon moving background subtle */
+@keyframes bgMove {
+  0%{background-position:0 0;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0 0;}
+}
+
+/* MAIN CARD */
+.cv{
+  width:900px;
+  background:rgba(10,15,31,.75);
+  backdrop-filter:blur(18px);
+  border-radius:18px;
+  display:flex;
+  overflow:hidden;
+  position:relative;
+  animation:fadeIn 1.3s ease;
+  box-shadow:0 0 45px rgba(0,255,255,.18);
+  border:1px solid rgba(0,255,255,.15);
+}
+
+/* LEFT */
+.left{
+  width:35%;
+  padding:35px 25px;
+  background:#020617;
+  color:#e6f1ff;
+  text-align:center;
+  border-right:1px solid rgba(0,255,255,.15);
+}
+
+.left img.profile{
+  width:125px;
+  height:125px;
+  border-radius:50%;
+  border:3px solid #00f5ff;
+  object-fit:cover;
+  margin-bottom:18px;
+  animation:pulse 3s infinite alternate;
+}
+
+.left h2{
+  letter-spacing:1.5px;
+}
+
+.left p{
+  font-size:14px;
+  color:#9bdcff;
+  margin-bottom:25px;
+}
+
+.left h3{
+  margin:22px 0 10px;
+  color:#00f5ff;
+  font-size:16px;
+  border-bottom:1px solid rgba(0,245,255,.6);
+  display:inline-block;
+}
+
+.left ul{
+  list-style:none;
+  text-align:left;
+  font-size:14px;
+}
+
+.left ul li{
+  margin-bottom:12px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  transition:.3s;
+}
+
+.left ul li:hover{
+  transform:translateX(6px);
+  color:#00f5ff;
+}
+
+.left ul li img{
+  width:18px;
+  filter:invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+/* LINKS */
+a{
+  color:#7dd3fc;
+  text-decoration:none;
+  transition:.3s;
+}
+
+a:hover{
+  color:#00f5ff;
+  text-shadow:0 0 10px rgba(0,245,255,.9);
+}
+
+/* RIGHT */
+.right{
+  width:65%;
+  padding:35px 45px;
+  color:#e6f1ff;
+}
+
+/* SECTIONS */
+.section{
+  margin-bottom:22px;
+  padding:12px;
+  border-radius:12px;
+  transition:.4s;
+}
+
+.section:hover{
+  background:rgba(0,245,255,.05);
+  box-shadow:inset 0 0 18px rgba(0,245,255,.15);
+}
+
+.section-title{
+  font-size:18px;
+  font-weight:600;
+  color:#00f5ff;
+  border-left:4px solid #00f5ff;
+  padding-left:10px;
+  margin-bottom:10px;
+}
+
+p{
+  font-size:14px;
+  line-height:1.7;
+  color:#cbd5e1;
+}
+
+h4{
+  color:#7dd3fc;
+}
+
+span{
+  font-size:13px;
+  color:#94a3b8;
+}
+
+.footer{
+  text-align:center;
+  font-size:12px;
+  color:#64748b;
+  margin-top:25px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(40px) scale(.96);}
+  to{opacity:1;transform:none;}
+}
+
+@keyframes pulse{
+  from{box-shadow:0 0 15px rgba(0,245,255,.4);}
+  to{box-shadow:0 0 35px rgba(0,245,255,.9);}
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .cv{flex-direction:column;width:95%}
+  .left,.right{width:100%}
+}
+
+</style>
 </head>
+
 <body>
-  <div class="cv-container">
-    <!-- Left Section -->
-    <div class="left">
-      <img src="./b.jpeg">
-      <h2>AYYAN AZEEM</h2>
-      <p>Student | Web Developer</p>
 
-      <h3>Contact</h3>
-      <ul>
-        <li>📞 03352957957</li>
-        <li>📧 ayyanbaba2030375@gmail.com</li>
-        <li>📍 Karachi, Pakistan</li>
-      </ul>
+<div class="cv">
 
-      <h3>Skills</h3>
-      <ul>
-        <li>HTML, CSS, JavaScript</li>
-        <li>Responsive Web Design</li>
-        <li>Basic Python</li>
-        <li>MS Word & PowerPoint</li>
-        <li>Creative Design</li>
-      </ul>
-    </div>
+<!-- LEFT -->
+<div class="left">
+  <img src="b.jpeg" class="profile">
+  <h2>AYYAN AZEEM</h2>
+  <p>Student | Front-End Web Developer</p>
 
-    <!-- Right Section -->
-    <div class="right">
-      <div class="about">
-        <h3 class="section-title">About Me</h3>
-        <p>Hi, I’m <strong>Ayyan Azeem</strong> — a passionate student currently studying in Matric. 
-        Alongside my studies, I’ve been learning and practicing web development for the past two years. 
-        During this time, I have successfully created over <strong>50+ responsive and professional web pages</strong> 
-        using HTML, CSS, and JavaScript. I love exploring technology, improving my coding skills, and building creative designs.</p>
-      </div>
+  <h3>Contact</h3>
+  <ul>
+    <li>📞 0335-2957957</li>
+    <li>📧 <a href="Emailto:ayyanbaba2030375@gmail.com">ayyanbaba2030375@gmail.com</a></li>
+    <li>
+      <img src="./Screenshot 2026-02-01 214532.png" alt="GitHub Logo">
+      <a href="https://github.com/ayyanbaba2030375-lang" target="_blank">github.com/ayyanbaba2030375-lang</a>
+    </li>
+    <li>📍 Karachi, Pakistan</li>
+  </ul>
 
-      <div class="education">
-        <h3 class="section-title">Education</h3>
-        <div class="edu-item">
-          <h4>Matriculation (Science Group)</h4>
-          <span>Bahria College EAB-1 | 2026 - Present</span>
-        </div>
-      </div>
+  <h3>Skills</h3>
+  <ul>
+    <li>HTML, CSS, JavaScript</li>
+    <li>Responsive Web Design</li>
+    <li>Basic Python</li>
+    <li>MS Word & PowerPoint</li>
+    <li>Creative UI Design</li>
+  </ul>
+</div>
 
-      <div class="experience">
-        <h3 class="section-title">Experience</h3>
-        <div class="exp-item">
-          <h4>Freelance Web Developer</h4>
-          <span>2023 - Present</span>
-          <p>Worked on more than 50 websites and web pages for practice and personal projects. 
-          Specialized in responsive layouts, creative UI design, and clean coding structure. 
-          Skilled at using HTML5, CSS3, and JavaScript to make modern and user-friendly designs.</p>
-        </div>
-      </div>
+<!-- RIGHT -->
+<div class="right">
 
-      <div class="achievements">
-        <h3 class="section-title">Achievements</h3>
-        <p>• Created 50+ modern web pages.<br>
-           • 2 years of practical coding experience.<br>
-           • Self-learned front-end web development.<br>
-           • Helped friends in learning basic web design concepts.<br>
-           • Participated in online coding challenges.
-        </p>
-      </div>
-
-      <div class="interests">
-        <h3 class="section-title">Interests</h3>
-        <p>Programming, Web Design, Technology, Reading, and Learning New Skills.</p>
-      </div>
-
-      <div class="footer">
-        © 2025 AYYAN AZEEM | All Rights Reserved
-      </div>
-    </div>
+  <div class="section">
+    <h3 class="section-title">About Me</h3>
+    <p>
+      I’m <strong>Ayyan Azeem</strong>, a passionate student currently pursuing Matric (Science).
+      I have over <strong>2 years of experience</strong> in front-end web development and have
+      created <strong>50+ modern, responsive web pages</strong>.
+      I love exploring AI tools for web design, animations, and modern interactive UI effects.
+    </p>
   </div>
+
+  <div class="section">
+    <h3 class="section-title">Education</h3>
+    <h4>Matriculation (Science Group)</h4>
+    <span>Bahria College EAB-1 | Present</span>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">Experience</h3>
+    <h4>Freelance Web Developer</h4>
+    <span>2023 – Present</span>
+    <p>
+      Designed and developed responsive websites using HTML5, CSS3, and JavaScript
+      with focus on clean code, modern effects, and AI-inspired UI animations.
+    </p>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">Achievements</h3>
+    <p>
+      • 50+ Web Pages Created<br>
+      • Self-Taught Front-End Developer<br>
+      • 2 Years Practical Experience<br>
+      • Helped peers learn web design
+    </p>
+  </div>
+
+  <div class="footer">
+    © 2025 AYYAN AZEEM | All Rights Reserved
+  </div>
+
+</div>
+</div>
+
 </body>
 </html>
-
-
-
